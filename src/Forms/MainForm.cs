@@ -38,6 +38,12 @@ namespace AudioStream.Forms {
             this.Show();
         }
 
+        private void restartToolStripMenuItem_Click(object sender, EventArgs e) {
+            this.notifyIcon1.Visible = false;
+            Application.Restart();
+            Environment.Exit(0);
+        }
+
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
             if (e.CloseReason == CloseReason.UserClosing) {
                 e.Cancel = true;
